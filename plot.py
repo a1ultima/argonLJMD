@@ -2,7 +2,7 @@
 
 import matplotlib.pyplot as plt
 
-fi = open("./temperature_diffusion-coefficient.dat","r")
+fi = open("./data/temperature_diffusion-coefficient.dat","r")
 
 dc_list = []
 dc2_list = []
@@ -44,7 +44,7 @@ fig = plt.gcf()
 plt.ylabel('Diffusion Coefficient')
 plt.xlabel('Time')
 plt.title('Diffusion Coefficient of Argon particles')
-plt.savefig('./diffusion_coefficient.png')
+plt.savefig('./plots/diffusion_coefficient.png')
 
 plt.plot(dt_list[1:], dT_list[1:], 'g')
 
@@ -53,7 +53,7 @@ fig = plt.gcf()
 plt.ylabel('Temperature')
 plt.xlabel('Time')
 plt.title('Temperature fluctuations of Argon particles')
-plt.savefig('./temperature.png')
+plt.savefig('./plots/temperature.png')
 
 fi.close()
 

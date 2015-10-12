@@ -13,7 +13,7 @@ using namespace std;
 #define dx 10 //lattice spacing
 #define Lx (L/dx) //renormalised length
 #define N (Lx*Lx*Lx) // 125 particles (Lx*Lx*Lx) //total number of particles
-#define NSTEP 5000000 //total number of time steps
+#define NSTEP 10000 //total number of time steps
 
 //constants
 
@@ -49,7 +49,7 @@ double r6, r12;
 // file output
 
 FILE *file[10];
-const char *dirs[]    = { "../../data/x.dat" , "../../data/y.dat","../../data/z.dat" ,"../../data/vx.dat","../../data/vy.dat","../../data/vz.dat","../../data/fx.dat","../../data/fy.dat","../../data/fz.dat", "../../data/temperature_diffusion-coefficient.dat"   };
+const char *dirs[]    = { "./data/x.dat" , "./data/y.dat","./data/z.dat" ,"./data/vx.dat","./data/vy.dat","./data/vz.dat","./data/fx.dat","./data/fy.dat","./data/fz.dat", "./data/temperature_diffusion-coefficient.dat"   };
 const char *headers[] = { "#X(t) Coordinates\n#Time(t)\t","#Y(t) Coordinates\n#Time(t)\t","#Z(t) Coordinates\n#Time(t)\t","#X(t) Velocities\n#Time(t)\t","#Y(t) Velocities\n#Time(t)\t","#Z(t) Velocities\n#Time(t)\t","#X(t) Forces\n#Time(t)\t","#Y(t) Forces\n#Time(t)\t","#Z(t) Forces\n#Time(t)\t", "#Time(t)\tTemperature (t)\tDiffusion coefficient (t)" };
 
 //functions
