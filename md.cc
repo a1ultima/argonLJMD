@@ -13,7 +13,7 @@ using namespace std;
 #define dx 10 //lattice spacing
 #define Lx (L/dx) //renormalised length
 #define N (Lx*Lx*Lx) // 125 particles (Lx*Lx*Lx) //total number of particles
-#define NSTEP 10000 //total number of time steps
+#define NSTEP 5000000 //total number of time steps
 
 //constants
 
