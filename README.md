@@ -2,8 +2,6 @@
 
 Usage: bash ./pipeline.sh
 	 	 	 	
-Numerical Methods towards Exascale Workshop Wuppertal
-Exercise: Molecular Dynamics
 Introduction
 
 Molecular dynamics (MD) involves simulating the physical movements and interactions of atoms and molecules in a computer. Such simulations allow researchers to understand properties of a system of molecules or atoms, from first principles. A fundamental requirement of MD simulations is provided by the definition of the interaction potential. One can describe pairwise interatomic forces with Lennard-Jones potential, for noble gases such as Argon whose atoms behave approximately like hard spheres that attract one another with Wan der Waals forces:
@@ -64,4 +62,5 @@ Memory conservation was achieved by ensuring time-dependent value calculations w
 
 Parallelization with OpenMP was implemented on the pairwise Lennard-Jones force calculations. Splitting the n2 pairs of calculations amongst three threads, on a two core (four thread) machine. Three threads yielded optimal runtimes saving on average 26% of the runtime. Using either a single thread or all four threads led to similar runtimes, both worse than using three.  
 
-
+Goal: Use Molecular Dynamics to simulate simple system of argon atoms 
+Supervision: Numerical Methods towards Exascale Workshop Wuppertal
