@@ -2,7 +2,7 @@
 
 Usage: bash ./pipeline.sh
 	 	 	 	
-Introduction
+## Introduction
 
 Molecular dynamics (MD) involves simulating the physical movements and interactions of atoms and molecules in a computer. Such simulations allow researchers to understand properties of a system of molecules or atoms, from first principles. A fundamental requirement of MD simulations is provided by the definition of the interaction potential. One can describe pairwise interatomic forces with Lennard-Jones potential, for noble gases such as Argon whose atoms behave approximately like hard spheres that attract one another with Wan der Waals forces:
 	
