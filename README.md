@@ -11,7 +11,8 @@ LJ (r) =V(r)= 4[(r)12-(r)6]
 Where r is the distance between two atoms’ centers ε is the energy-parameter, the strength of the potential energy, and σ is the atom’s size-parameter. 
 
 The primary goal of this study is to approximate macroscopic properties of a system of gaseous Argon atoms: (i) diffusion coefficient, and (ii) temperature. In this study, measurements of these properties were achieved by implementing an MD simulation, for argon atoms interacting according to the Lennard-Jones potential, and using the velocity verlet integrator to solve the equations of motion. The molecular dynamics of a system of 125, N, gaseous Argon atoms were simulated by implementing and program compiled in the C++ computing language (md.cc), plotting of data was implemented in Python (plot.py) and a BASH shell script to coordinate execution of md.cc, plot.py and to prepare the environent for multi-thread parallelization (pipeline.sh). 
-Reduced units
+
+## Reduced units
 
 The theorem of corresponding states allows us to define a set of dimensionless reduced units. One particular implication of this theorem is that we can perform all simulations with ε=1.0 and σ=1.0, the so called Lennard-Jones units. Reducing values to dimensionless Lennard-Jones units simplifies calculations, and keeps values within a sensible dynamic range during the MD simulation, for example, the Lennard-Jones force between two particles, i and i is given by:
 F i,j LJ= -Fj,iLJ=48r14-24r8
@@ -27,7 +28,7 @@ v(t+t)=v(t)+12[a(t)+a(t+t)]t
 
 Velocity verlet integrates with low computational cost. Errors in this algorithm are of O(dt4), stable in MD applications, and in particular it rather successfully conserves energy of the system. 
 
-Periodic boundary conditions and volume
+## Periodic boundary conditions and volume
 
 To avoid unusual interactions with a physical boundary, periodic boundary conditions were implemented, in which a particle on, say, the right boundary of the system interacts with the particles close to the left boundary of the system as though there would be a copy of the whole system (a periodic image of the system). This fixes the volume, V, of the system at L3, where L=50 is the length of a lattice edge V=503. 
 
@@ -52,7 +53,7 @@ The MD simulation initiates velocities randomly, with a maximum of Vmax=2.7 and 
 
 Figure.3. Minor temperature fluctuations around ~2.43 (LJ units)
 
-Algorithm performance and optimisation
+## Algorithm performance and optimisation
 
 Average runtime for 5 million timesteps and 125 molecules is 25 minutes (intel i3 processor).
 
